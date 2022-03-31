@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DEF y USE</title>
+     <script src='https://www.x3dom.org/x3dom/release/x3dom-full.js'></script>
+    <link rel='stylesheet' href='https://www.x3dom.org/x3dom/release/x3dom.css'>
+</head>
+<style>
+    body {
+        background-color: black;
+        color: white;
+        font-family: sans-serif;
+        margin: 0;
+    }
+
+    .fondo {
+        width: 100vw;
+        height: 100vh;
+}
+</style>
+<body>
+  <X3D class="Fondo">
+<Scene>
+    <Transform DEF='Fila'> <!-- abre Fila 1-->
+        <Transform DEF='arco'>
+        <inline DEF="Arco" url="arco_medio.x3d"></inline>
+    </Transform>
+        
+    <Transform translation="3.5 0 0">
+        <shape USE="arco"/>
+    </Transform>
+
+
+<Transform rotation="0 1 0 -1.57">
+    <Transform USE="Fila"></Transform>>
+</Transform>
+
+
+</Scene>
+  </X3D>  
+</body>
+</html>
